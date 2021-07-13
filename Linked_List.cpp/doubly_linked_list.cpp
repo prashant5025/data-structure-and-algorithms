@@ -1,3 +1,6 @@
+//--------------------Doubly Linked List----------------------//
+
+
 #include<iostream>
 using namespace std;
 
@@ -14,6 +17,8 @@ class node{
     }
 };
 
+//-----------------------Inserting at Head --------------------------------//
+
 void insertathead(node*&head, int val){
 
     node* n = new node(val);
@@ -25,6 +30,7 @@ void insertathead(node*&head, int val){
     head =n;
 }
 
+//-----------------------Inserting at Tail --------------------------------//
 
 void insertattail(node*&head, int val){
     
@@ -45,6 +51,8 @@ void insertattail(node*&head, int val){
     n->prev = temp;
     
 }
+//-----------------------Display Function --------------------------------//
+
 void display(node* &head){
     node*temp = head;
     while (temp!=NULL)
@@ -55,6 +63,9 @@ void display(node* &head){
     cout<<endl;
     
 }
+
+//-----------------------Deletion Form Head--------------------------------//
+
 void deleteathead(node* &head){
     node* todelete=head;
     head=head ->next;
@@ -62,6 +73,9 @@ void deleteathead(node* &head){
 
     delete todelete;
 }
+
+////-----------------------Deletion Form Giving position--------------------------------//
+
 
 void deletion(node*&head, int pos){
 
@@ -86,6 +100,7 @@ void deletion(node*&head, int pos){
     delete temp;
 }
 
+////-----------------------<Main>--------------------------------//
 
 
 int main(){
